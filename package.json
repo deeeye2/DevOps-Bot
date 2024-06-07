@@ -1,11 +1,7 @@
 {
   "name": "devops-bot-frontend",
   "version": "1.0.0",
-<<<<<<< HEAD:package.json
   "description": "Frontend for DevOps Bot",
-=======
-  "description": "DevOps Bot Frontend",
->>>>>>> 306a6d84ec095023c4e8eb57a5b31fc6567c8abf:frontend/package.json
   "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -16,22 +12,11 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD:package.json
     "react-scripts": "^4.0.3"
-=======
-    "react-scripts": "4.0.3"
-  },
-  "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
->>>>>>> 306a6d84ec095023c4e8eb57a5b31fc6567c8abf:frontend/package.json
   },
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
-  }
+  "license": "ISC"
 }
 
