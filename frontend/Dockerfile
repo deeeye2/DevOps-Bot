@@ -1,11 +1,14 @@
 # frontend/Dockerfile
 FROM node:14
+
 WORKDIR /usr/src/app
+
 COPY package*.json ./
 RUN npm install
+
 COPY . .
-RUN chmod -R 777 /usr/src/app
+
 RUN npm run build
-EXPOSE 3000
-CMD ["npx", "serve", "-s", "build"]
+
+CMD ["npm", "start"]
 
