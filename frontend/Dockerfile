@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /usr/src/app
 
 # Copy application dependency manifests to the container image.
-COPY package*.json ./
+COPY package.json ./
 
 # Install production dependencies.
 RUN npm install
