@@ -56,6 +56,13 @@ body {
     display: none;
 }
 
+.register-form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+
 .register-form, .contact-form, .calendar, .time {
     margin-top: 20px;
     padding: 20px;
@@ -102,7 +109,7 @@ body {
 }
 
 .marquee {
-    background-color: 332222;
+    background-color: #332222;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -127,21 +134,21 @@ body {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #1D3849;
+    background-color: #222;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .contact-form button:hover, .calendar button:hover {
-    background-color: #1D3849;
+    background-color: #222;
 }
 
 .time {
     text-align: center;
     margin-top: 10px;
-    background-color: #13202A;
+    background-color: #BFA89E;
     padding: 10px;
     border-radius: 5px;
-    width: 50px;
+    width: 200px;
 }
