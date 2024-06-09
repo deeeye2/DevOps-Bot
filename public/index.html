@@ -4,37 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Bot</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 </head>
 <body>
-    <div class="background-container">
-        <div class="login-container">
-        <h1>Login to DevOps-bot</h1>
-            </div>
+    <div class="container">
+        <div class="header">
+            <img src="https://share.icloud.com/photos/02bMLnttFbPjAHPr8Xp1zavVA" alt="DevOps Bot" class="header-image">
             <div class="login-form">
-                <h2>Login</h2>
-                <form>
+                <form id="loginForm">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input id="username" name="username" required>
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                     <button type="submit">Login</button>
                 </form>
-                <p>Don't have an account? <a href="#">Create one</a></p>
+                <p>Don't have an account? <a href="#" id="showRegisterForm">Create one</a></p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="logo">
+                <img src="https://share.icloud.com/photos/05cyrXecwJMJgO3rIu62lTCfw" alt="Logo">
+            </div>
+            <div class="register-form" style="display: none;">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <label for="regUsername">Username</label>
+                    <input id="regUsername" name="username" required>
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" name="password" required>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required>
+                    <label for="surname">Surname</label>
+                    <input id="surname" name="surname" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="showLoginForm">Login</a></p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="contactName">Name</label>
+                <input id="contactName" name="name" required>
+                <label for="contactEmail">Email</label>
+                <input id="contactEmail" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="calendar">
+            <h2>Calendar</h2>
+            <div id="calendar"></div>
+        </div>
+        <div class="time">
+            <h2>Current Time</h2>
+            <div id="currentTime"></div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 DevOps Bot. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 DevOps Bot. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        </div>
-    </footer>
     <script>
-        !function(e){function t(t){for(var n,f,l=t[0],p=t[1],i=t[2],c=0,s=[];c<l.length;c++)f=l[c],Object.prototype.hasOwnProperty.call(o,f)&&o[f]&&s.push(o[f][0]),o[f]=0;for(n in p)Object.prototype.hasOwnProperty.call(p,n)&&(e[n]=p[n]);for(a&&a(t);s.length;)s.shift()();return u.push.apply(u,i||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,l=1;l<r.length;l++){var p=r[l];0!==o[p]&&(n=!1)}n&&(u.splice(t--,1),e=f(f.s=r[0]))}return e}var n={},o={1:0},u=[];function f(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,f),r.l=!0,r.exports}f.m=e,f.c=n,f.d=function(e,t,r){f.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},f.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},f.t=function(e,t){if(1&t&&(e=f(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(f.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)f.d(r,n,function(t){return e[t]}.bind(null,n));return r},f.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return f.d(t,"a",t),t},f.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},f.p="/";var l=this["webpackJsonpdevops-bot-frontend"]=this["webpackJsonpdevops-bot-frontend"]||[],p=l.push.bind(l);l.push=t,l=l.slice();for(var i=0;i<l.length;i++)t(l[i]);var a=p;r()}([])
+        document.getElementById('showRegisterForm').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.register-form').style.display = 'block';
+        });
+
+        document.getElementById('showLoginForm').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.register-form').style.display = 'none';
+            document.querySelector('.login-form').style.display = 'block';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add login functionality here
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add registration functionality here
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add contact form functionality here
+        });
+
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                defaultView: 'month',
+                editable: true,
+                events: []
+            });
+        });
+
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            var currentTime = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('currentTime').textContent = currentTime;
+        }
+
+        setInterval(updateTime, 1000);
     </script>
-    <script src="/static/js/2.c7651b30.chunk.js"></script>
-    <script src="/static/js/main.1b2a0d65.chunk.js"></script>
-    <script src="/static/js/main.1b2a0d65.chunk.js"></script>
 </body>
 </html>
+
+
