@@ -13,8 +13,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="IMG_2055" alt="DevOps Bot" class="header-image">
+            <img src="header.jpg" alt="DevOps Bot" class="header-image">
             <div class="login-form">
+                <h2>Login</h2>
                 <form id="loginForm">
                     <label for="username">Username</label>
                     <input id="username" name="username" required>
@@ -22,56 +23,51 @@
                     <input type="password" id="password" name="password" required>
                     <button type="submit">Login</button>
                 </form>
+                <p>Don't have an account? <a href="#" id="showRegisterForm">Create one</a></p>
             </div>
         </div>
         <div class="content">
             <div class="logo">
                 <img src="IMG_2055.png" alt="Logo">
             </div>
-            <div class="register-form">
-                <h2>Register</h2>
-                <form id="registerForm">
-                    <label for="regUsername">Username</label>
-                    <br>
-                    <input id="regUsername" name="username" required>
-                    <br>
-                    <label for="regPassword">Password</label>
-                    <br>
-                    <input type="password" id="regPassword" name="password" required>
-                    <br>
-                    <label for="name">Name</label>
-                    <br>
-                    <input id="name" name="name" required>
-                    <br>
-                    <label for="surname">Surname</label>
-                    <br>
-                    <input id="surname" name="surname" required>
-                    <br>
-                    <label for="email">Email</label>
-                    <br>
-                    <input id="email" name="email" required>
-                    <br>
-                    <button type="submit">Register</button>
-                </form>
-                <p>Already have an account? <a href="#" id="showLoginForm">Login</a></p>
+            <div class="form-container">
+                <div class="register-form">
+                    <h2>Register</h2>
+                    <form id="registerForm">
+                        <label for="regUsername">Username</label>
+                        <input id="regUsername" name="username" required>
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" name="password" required>
+                        <label for="name">Name</label>
+                        <input id="name" name="name" required>
+                        <label for="surname">Surname</label>
+                        <input id="surname" name="surname" required>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" required>
+                        <button type="submit">Register</button>
+                    </form>
+                    <p>Already have an account? <a href="#" id="showLoginForm">Login</a></p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <label for="contactName">Name</label>
-            <input id="contactName" name="name" required>
-            <label for="contactEmail">Email</label>
-            <input id="contactEmail" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-    <div class="calendar">
-        <h2>Calendar</h2>
-        <div id="calendar"></div>
+    <div class="bottom-section">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="contactName">Name</label>
+                <input id="contactName" name="name" required>
+                <label for="contactEmail">Email</label>
+                <input id="contactEmail" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="calendar">
+            <h2>Calendar</h2>
+            <div id="calendar"></div>
+        </div>
     </div>
     <div class="time">
         <h2>Current Time</h2>
@@ -83,7 +79,7 @@
             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
     </div>
-     <div class="marquee">
+    <div class="marquee">
         <marquee behavior="scroll" direction="left">
             Mohamed Sesay | DevOps Engineer | The purpose of this page is to help DevOps engineers solve DevOps tools problems like installing, networking, and more.
         </marquee>
@@ -137,6 +133,7 @@
     </script>
 </body>
 </html>
+
 
 
 
