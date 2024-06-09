@@ -10,18 +10,19 @@ body {
 }
 
 .header {
-    background-color: yellow;
-    color: #495867;
+    width: 100%;
+    height: 10vh; /* Header height set to 10% of the viewport height */
+    background: url('website.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    height: 10vh;
-    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.header-left img {
-    height: 50px;
+/* Logo inside header */
+.header img.header-image {
+    height: 80%;
 }
 
 .header-right {
