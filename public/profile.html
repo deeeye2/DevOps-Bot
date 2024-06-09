@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevOps Bot - Profile</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="/static/css/main.3740d47f.chunk.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://share.icloud.com/photos/02bMLnttFbPjAHPr8Xp1zavVA" alt="DevOps Bot" class="header-image">
+        </div>
+        <div class="content">
+            <div class="profile">
+                <h2>Profile</h2>
+                <form id="profileForm">
+                    <label for="profileUsername">Username</label>
+                    <input id="profileUsername" name="username" required disabled>
+                    <label for="profileName">Name</label>
+                    <input id="profileName" name="name" required>
+                    <label for="profileSurname">Surname</label>
+                    <input id="profileSurname" name="surname" required>
+                    <label for="profileEmail">Email</label>
+                    <input id="profileEmail" name="email" required>
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 DevOps Bot. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add profile update functionality here
+        });
+
+        // Populate profile form with user data
+        // This data should be fetched from your backend
+        const userProfile = {
+            username: 'testuser',
+            name: 'Test',
+            surname: 'User',
+            email: 'test@example.com'
+        };
+
+        document.getElementById('profileUsername').value = userProfile.username;
+        document.getElementById('profileName').value = userProfile.name;
+        document.getElementById('profileSurname').value = userProfile.surname;
+        document.getElementById('profileEmail').value = userProfile.email;
+    </script>
+</body>
+</html>
