@@ -26,83 +26,86 @@ body {
     padding: 0 20px;
 }
 
-/* Logo inside header */
-.header img.header-image {
+.header-image {
     height: 50px;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
 .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.login-form h2 {
-    margin: 0;
-}
-
-.login-form label {
-    margin: 5px 0;
-}
-
-.login-form input {
-    margin: 5px 0;
-}
-
-.login-form button {
-    margin: 5px 0;
-    padding: 5px 10px;
-    background-color: #577399;
-    color: white;
-    border: none;
-    cursor: pointer;
+    top: 10px;
+    right: 10px;
 }
 
 .content {
-    flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    justify-content: space-between;
     padding: 20px;
 }
 
-.logo img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.form-container {
+    flex: 1;
+    text-align: left;
+}
+
+.register-form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .bottom-section {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    height: 10vh;
+}
+
+.contact-form, .calendar {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
 }
 
 .contact-form {
     background-color: yellow;
-    color: #495867;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
 }
 
-.contact-form h2 {
-    margin-top: 0;
+.calendar {
+    background-color: greenpink;
 }
 
-.contact-form label {
-    display: block;
-    margin: 10px 0 5px;
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.marquee {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-form form, .calendar div {
+    width: 300px;
+    max-width: 100%;
 }
 
 .contact-form input, .contact-form textarea, .calendar input, .calendar textarea {
@@ -113,105 +116,21 @@ body {
     border: none;
 }
 
-.contact-form button {
-    background-color: #577399;
-    color: white;
+.contact-form button, .calendar button {
+    width: 100%;
     padding: 10px;
     border: none;
+    background-color: #222;
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background-color: #34495e;
-}
-
-.calendar {
-    background-color: #98FB98; /* GreenPink color */
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
-}
-
-.calendar h2 {
-    margin-top: 0;
-}
-
-#calendar {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 10px;
+.contact-form button:hover, .calendar button:hover {
+    background-color: #333;
 }
 
 .time {
     text-align: center;
-    margin: 20px 0;
+    margin-top: 10px;
 }
-
-.footer {
-    background-color: #34495e;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-.footer-content a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .login-form {
-        position: static;
-        align-items: flex-start;
-    }
-
-    .bottom-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-form,
-    .calendar {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-/* Moving text */
-.moving-text {
-    width: 100%;
-    background-color: #78A1BB;
-    color: #E5EFF5;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 10px 0;
-}
-
-.moving-text p {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(50%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
