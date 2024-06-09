@@ -28,6 +28,7 @@ body, html {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    background-color: yellow; /* Yellow background for header */
 }
 
 /* Logo inside header */
@@ -106,4 +107,31 @@ body, html {
 
 .footer-content a:hover {
     text-decoration: underline;
+}
+
+/* Moving text */
+.moving-text {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+}
+
+.moving-text p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
