@@ -32,7 +32,7 @@ body, html {
 
 /* Logo inside header */
 .header img.header-image {
-    height: 10%;
+    height: 80%;
 }
 
 /* Login form inside header */
@@ -90,18 +90,7 @@ body, html {
     background-color: lightgreen; /* Light green background for calendar */
 }
 
-.footer {
-    width: 100%;
-    padding: 10px 0;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
 
-.footer-content a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
 }
 
 .footer-content a:hover {
@@ -123,7 +112,7 @@ body, html {
 .moving-text p {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 10s linear infinite;
+    animation: marquee 30s linear infinite;
 }
 
 @keyframes marquee {
@@ -134,3 +123,15 @@ body, html {
         transform: translateX(-100%);
     }
 }
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-content a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
