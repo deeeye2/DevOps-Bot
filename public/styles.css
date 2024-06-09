@@ -14,7 +14,7 @@ body {
 
 .header {
     width: 100%;
-    height: 15vh; /* Header height set to 10% of the viewport height */
+    height: 20vh; /* Header height set to 10% of the viewport height */
     background: url('header.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -32,9 +32,12 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: green;
     padding: 10px;
     border-radius: 5px;
+}
+
+.login-form h2, .login-form label, .login-form a {
+    color: green;
 }
 
 .content {
@@ -47,7 +50,7 @@ body {
 .logo {
     flex: 1;
     text-align: right;
-    width: 10%;
+    width: 25%;
 }
 
 .logo img {
@@ -72,7 +75,7 @@ body {
     
 }
 
-.register-form, .contact-form, .calendar, .time {
+.contact-form, .calendar, .time {
     margin-top: 20px;
     padding: 20px;
     width: 80%;
