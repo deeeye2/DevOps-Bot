@@ -28,12 +28,11 @@ body, html {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    background-color: yellow; /* Yellow background for header */
 }
 
 /* Logo inside header */
 .header img.header-image {
-    height: 80%;
+    height: 10%;
 }
 
 /* Login form inside header */
