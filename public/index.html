@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevOps Bot</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="IMG_2055.png" alt="DevOps Bot" class="header-image">
+            <img src="https://share.icloud.com/photos/02bMLnttFbPjAHPr8Xp1zavVA" alt="DevOps Bot" class="header-image">
             <div class="login-form">
                 <form id="loginForm">
                     <label for="username">Username</label>
@@ -22,14 +22,13 @@
                     <input type="password" id="password" name="password" required>
                     <button type="submit">Login</button>
                 </form>
-                <p>Don't have an account? <a href="#" id="showRegisterForm">Create one</a></p>
             </div>
         </div>
         <div class="content">
             <div class="logo">
                 <img src="IMG_2055.png" alt="Logo">
             </div>
-            <div class="register-form" style="display: none;">
+            <div class="register-form">
                 <h2>Register</h2>
                 <form id="registerForm">
                     <label for="regUsername">Username</label>
@@ -47,33 +46,31 @@
                 <p>Already have an account? <a href="#" id="showLoginForm">Login</a></p>
             </div>
         </div>
-        <div class="bottom-section">
-            <div class="contact-form">
-                <h2>Contact Us</h2>
-                <form id="contactForm">
-                    <label for="contactName">Name</label>
-                    <input id="contactName" name="name" required>
-                    <label for="contactEmail">Email</label>
-                    <input id="contactEmail" name="email" required>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <div class="calendar">
-                <h2>Calendar</h2>
-                <div id="calendar"></div>
-            </div>
-        </div>
-        <div class="time">
-            <h2>Current Time</h2>
-            <div id="currentTime"></div>
-        </div>
-        <div class="footer">
-            <div class="footer-content">
-                <p>&copy; 2024 DevOps Bot. All rights reserved.</p>
-                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            </div>
+    </div>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" required>
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div class="calendar">
+        <h2>Calendar</h2>
+        <div id="calendar"></div>
+    </div>
+    <div class="time">
+        <h2>Current Time</h2>
+        <div id="currentTime"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 DevOps Bot. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
     </div>
     <script>
@@ -125,5 +122,6 @@
     </script>
 </body>
 </html>
+
 
 
