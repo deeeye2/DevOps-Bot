@@ -1,19 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #495867;
+/* styles.css */
+
+/* Global styles */
+body, html {
     margin: 0;
     padding: 0;
-    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the whole page */
+.container {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #495867; /* Background color for the body */
 }
 
 /* Header styles */
 .header {
     width: 100%;
     height: 10vh; /* Header height set to 10% of the viewport height */
-    background: url('header.jpg') no-repeat center center;
+    background: url('website.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -21,165 +30,80 @@ body {
     padding: 0 20px;
 }
 
-.header-left img {
-    height: 50px;
+/* Logo inside header */
+.header img.header-image {
+    height: 80%;
 }
 
-.header-right {
+/* Login form inside header */
+.header .login-form {
     display: flex;
     align-items: center;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.login-form h2 {
-    margin: 0;
-}
-
-.login-form label {
-    margin: 5px 0;
-}
-
+/* Login form styles */
 .login-form input {
-    margin: 5px 0;
+    margin: 0 10px;
+    padding: 5px;
 }
 
 .login-form button {
-    margin: 5px 0;
     padding: 5px 10px;
-    background-color: #577399;
-    color: white;
+    background-color: yellow; /* Yellow button background */
     border: none;
     cursor: pointer;
 }
 
+.login-form button:hover {
+    background-color: darkyellow; /* Darker yellow on hover */
+}
+
+/* Content styles */
 .content {
+    width: 100%;
     flex: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Register form */
+.register-form {
+    display: none;
+}
+
+.register-form, .contact-form, .calendar, .time {
+    margin-top: 20px;
     padding: 20px;
-}
-
-.logo img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-}
-
-.bottom-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
-    background-color: yellow;
-    color: #495867;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
-}
-
-.contact-form h2 {
-    margin-top: 0;
-}
-
-.contact-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    background-color: #577399;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #34495e;
+    background-color: yellow; /* Yellow background for contact form */
 }
 
 .calendar {
-    background-color: #98FB98; /* GreenPink color */
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
-}
-
-.calendar h2 {
-    margin-top: 0;
-}
-
-#calendar {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.time {
-    text-align: center;
-    margin: 20px 0;
+    background-color: lightgreen; /* Light green background for calendar */
 }
 
 .footer {
-    background-color: #34495e;
-    padding: 20px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    color: white;
 }
 
 .footer-content a {
-    color: #ffffff;
+    color: #fff;
+    margin: 0 10px;
     text-decoration: none;
 }
 
 .footer-content a:hover {
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .login-form {
-        position: static;
-        align-items: flex-start;
-    }
-
-    .bottom-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-form,
-    .calendar {
-        width: 100%;
-        margin-bottom: 20px;
-    }
 }
