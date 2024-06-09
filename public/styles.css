@@ -20,7 +20,7 @@ body, html {
 
 /* Header styles */
 .header {
-    width: 100%;
+    width: 50%;
     height: 10vh; /* Header height set to 10% of the viewport height */
     background: url('website.jpg') no-repeat center center;
     background-size: cover;
@@ -32,7 +32,7 @@ body, html {
 
 /* Logo inside header */
 .header img.header-image {
-    height: 80%;
+    height: 50%;
 }
 
 /* Login form inside header */
@@ -100,8 +100,8 @@ body, html {
 /* Moving text */
 .moving-text {
     width: 100%;
-    background-color: #000;
-    color: #fff;
+    background-color: #78A1BB;
+    color: #E5EFF5;
     text-align: center;
     position: fixed;
     bottom: 0;
