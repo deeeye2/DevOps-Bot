@@ -51,10 +51,18 @@ body {
     text-align: left;
 }
 
+/* Register form */
 .register-form {
-    background-color: #222;
+    display: none;
+}
+
+.register-form, .contact-form, .calendar, .time {
+    margin-top: 20px;
     padding: 20px;
+    width: 80%;
+    background-color: #BFA89E;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .bottom-section {
@@ -119,20 +127,20 @@ body {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #222;
+    background-color: #1D3849;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .contact-form button:hover, .calendar button:hover {
-    background-color: #333;
+    background-color: #1D3849;
 }
 
 .time {
     text-align: center;
     margin-top: 10px;
-    background-color: 13202A;
+    background-color: #13202A;
     padding: 10px;
     border-radius: 5px;
     width: 50px;
