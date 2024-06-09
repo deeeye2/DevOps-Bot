@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    background-color: #ffffff;
+    background-color: yellow;
     color: #495867;
     display: flex;
     justify-content: space-between;
@@ -71,14 +71,20 @@ body {
     margin-bottom: 20px;
 }
 
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
 .contact-form {
-    background-color: #ffffff;
+    background-color: yellow;
     color: #495867;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
+    width: 45%;
 }
 
 .contact-form h2 {
@@ -113,9 +119,15 @@ body {
 }
 
 .calendar {
-    width: 100%;
-    max-width: 900px;
-    margin: 20px 0;
+    background-color: #98FB98; /* GreenPink color */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.calendar h2 {
+    margin-top: 0;
 }
 
 #calendar {
@@ -161,13 +173,14 @@ body {
         padding: 10px;
     }
 
-    .contact-form {
-        padding: 10px;
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .calendar,
-    #calendar {
+    .contact-form,
+    .calendar {
         width: 100%;
-        padding: 5px;
+        margin-bottom: 20px;
     }
 }
