@@ -22,7 +22,7 @@ body {
 
 /* Logo inside header */
 .header img.header-image {
-    height: 80%;
+    height: 50px;
 }
 
 .header-right {
