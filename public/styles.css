@@ -14,10 +14,14 @@ body {
 
 .header {
     width: 100%;
-    background-color: yellow;
-    text-align: center;
-    padding: 10px 0;
-    height: 10vh;
+    height: 10vh; /* Header height set to 10% of the viewport height */
+    background: url('header.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: yellow; /* Yellow background for header */
 }
 
 .header-image {
@@ -62,18 +66,18 @@ body {
 }
 
 .contact-form, .calendar {
-    width: 200px;
+    width: 300px;
     padding: 10px;
 }
 
 .contact-form {
     background-color: yellow;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .calendar {
     background-color: greenpink;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .footer {
@@ -90,7 +94,7 @@ body {
 }
 
 .marquee {
-    background-color: #333;
+    background-color: 332222;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -128,8 +132,8 @@ body {
 .time {
     text-align: center;
     margin-top: 10px;
-    background-color: #495867;
+    background-color: 13202A;
     padding: 10px;
     border-radius: 5px;
-    width: 200px;
+    width: 50px;
 }
