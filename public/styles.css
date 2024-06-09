@@ -63,11 +63,6 @@ body {
     text-align: left;
 }
 
-/* Register form */
-.register-form {
-    display: none;
-}
-
 .register-form {
     background-color: #222;
     padding: 20px;
