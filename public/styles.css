@@ -50,11 +50,11 @@ body {
 .logo {
     flex: 1;
     text-align: right;
-    width: 25%;
+    width: 80%;
 }
 
 .logo img {
-    width: 10%;
+    width: 40%;
     height: auto;
 }
 
