@@ -3,6 +3,7 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
         DOCKER_IMAGE = 'deeeye2/devops-bot-frontend:latest'
+        SSH_SERVER_NAME = 'kubeconfig' // Use the name defined in the Publish Over SSH plugin
     }
     stages {
         stage('Checkout') {
@@ -37,6 +38,42 @@ pipeline {
                 }
             }
         }
-        
+        stage('Deploy to Kubernetes') {
+            steps {
+                echo "Deploying DevOps Bot Frontend to Kubernetes"
+                sshPublisher(publishers: [
+                    sshPublisherDesc(
+                        configName: SSH_SERVER_NAME,
+                        transfers: [
+                            sshTransfer(
+                                sourceFiles: 'devops-bot-frontend.yml',
+                                removePrefix: '',
+                                remoteDirectory: '',
+                                execCommand: '''
+                                    echo "Navigating to home directory..."
+                                    cd /home/minikubeuser
+                                    if [ -f devops-bot-frontend.yml ]; then
+                                        echo "Applying Kubernetes configuration..."
+                                        kubectl apply -f devops-bot-frontend.yml
+                                    else
+                                        echo "File devops-bot-frontend.yml does not exist"
+                                        exit 1
+                                    fi
+                                '''
+                            )
+                        ],
+                        verbose: true
+                    )
+                ])
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed.'
+        }
     }
 }
