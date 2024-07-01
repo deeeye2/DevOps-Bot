@@ -47,4 +47,4 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 3000
-    nodePort: 30004  # Ensure this port is not used by other services
+    nodePort: 30004
